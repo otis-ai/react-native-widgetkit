@@ -6,7 +6,7 @@ class Widgetkit: NSObject {
     @objc(reloadAllTimelines)
     func reloadAllTimelines() -> Void {
         if #available(iOS 14.0, *) {
-            #if arch(arm64) || arch(i386) || arch(x86_64)
+            #if arch(arm64) || arch(x86_64)
                 WidgetCenter.shared.reloadAllTimelines()
             #endif
         }
@@ -15,7 +15,7 @@ class Widgetkit: NSObject {
     @objc(reloadTimelines:)
     func reloadTimelines(ofKind: String) -> Void {
         if #available(iOS 14.0, *) {
-            #if arch(arm64) || arch(i386) || arch(x86_64)
+            #if arch(arm64) || arch(x86_64)
                 WidgetCenter.shared.reloadTimelines(ofKind: ofKind)
             #endif
         }
